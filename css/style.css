@@ -482,14 +482,49 @@ img {
   gap: 0;
 }
 
+/* Change position of the elements(to left instead of center) */
 .skills__name,
 .languages__name {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: left;
   margin-bottom: var(--mb-3);
 }
+/* .languages__name {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--mb-3);
+} */
 
-.skills__circle,
+/* Add line instead of a circle */
+
+.skills__line {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #d8dbe2;
+  /* border-radius: 50%; */
+  /* margin-right: 0.75rem; */
+  margin-top: var(--mb-1);
+}
+
+.skills__progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+
+  background-color: #0b0a0a;
+}
+/* .skills__data ul li span .skills__line {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #d8dbe2;
+} */
+
 .languages__circle {
   display: inline-block;
   width: 5px;
