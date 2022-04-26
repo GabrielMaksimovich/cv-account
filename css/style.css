@@ -483,18 +483,12 @@ img {
 }
 
 /* Change position of the elements(to left instead of center) */
-.skills__name,
-.languages__name {
+.skills__name {
   display: flex;
   flex-direction: column;
   align-items: left;
   margin-bottom: var(--mb-3);
 }
-/* .languages__name {
-  display: flex;
-  align-items: center;
-  margin-bottom: var(--mb-3);
-} */
 
 /* Add line instead of a circle */
 
@@ -515,8 +509,25 @@ img {
   left: 0;
   height: 100%;
 
-  background-color: #0b0a0a;
+  background-color: var(--text-color-light);
 }
+
+.languages__name {
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  margin-bottom: var(--mb-3);
+}
+
+.languages__inner {
+  margin-left: 0.15rem;
+}
+/* .languages__name {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--mb-3);
+} */
+
 /* .skills__data ul li span .skills__line {
   position: relative;
   display: block;
@@ -526,12 +537,29 @@ img {
 } */
 
 .languages__circle {
+  position: relative;
   display: inline-block;
-  width: 5px;
-  height: 5px;
+  width: 8px;
+  height: 8px;
   background-color: var(--text-color);
   border-radius: 50%;
-  margin-right: 0.75rem;
+  margin-right: 0.25rem;
+}
+
+.circle__container {
+  position: absolute;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  height: 14px;
+}
+
+span .circle__container {
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: #4c7753;
+  border-radius: 14px;
 }
 
 /*  ========== CERTIFICATES ==========  */
